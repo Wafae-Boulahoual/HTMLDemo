@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(219, 212, 212) ;">
+    <div style="text-align: right;">
+        <a href="index.html">*Hem*</a>
+        <a href="products.html">Våra produkter*</a>
+        <a href="contactus.html">Kontakta oss*</a>
+        <a href="yourcontact.html">Kund kontakt*</a>
+        <a href="mediapage.html">Media*</a>
+        <h1 style="color: maroon; text-align: center;"><em>Kontaktformulär</em></h1>
+    </div>
+    <br>
+
+    <form action="http://primat.se/services/sendform.aspx?xid=registrering&xmail=wafae.essbai@gmail.com" method="post">
+        <label for="name"> Ditt nam</label>
+        <input id="name" type="text" name="name" placeholder="Ange ditt namn" required><br>
+
+        <label for="address"> Din adress </label>
+        <input id="address" type=text name="address" placeholder="Ange din adress"><br>
+
+        <label for="email"> Ditt e-post </label>
+        <input id="email" type="text" name="email" placeholder="Ange ditt e-postadress"><br>
+
+        <label for="phonenumber"> Telefonnummer </label>
+        <input id="phonenumber" type="text" name="phonenumber" placeholder="Ange ditt telefonnummer"><br>
+
+        <p>Är du en privat kund eller företag?</p>
+
+        <input type="radio" id="private" name="privateorcompany" value="private" onclick="showSize(false)">
+        <label for="private">Privat</label><br>
+
+        <input type="radio" id="compagny" name="privateorcompany" value="company" onclick="showSize(true)">
+        <label for="company">Företag</label><br>
+
+        <div id="companysize" style="display: none; margin-top:10px;">
+            <p> Storlek på företaget</p>
+
+            <input type="radio" id="smallcampany" name="companysize" value="smallcompany">
+            <label for="smallcompany">Mellan 1 och 100 anställda</label>
+
+            <input type="radio" id="mediumcampany" name="companysize" value="mediumcompany">
+            <label for="mediumcompany">Mellan 101 och 1000 anställda</label>
+
+            <input type="radio" id="bigcampany" name="companysize" value="bigcompany">
+            <label for="bigcompany">Mer än 1000 anställda</label>
+        </div><br>
+        <script>
+            function showSize(show) {
+                const div = document.getElementById("companysize");
+                if (show) 
+                {
+                    div.style.display = "block";
+                }
+                else 
+                {
+                    div.style.display = "none";
+                }
+            }
+        </script>
+
+
+        <label for="questions"><em style="color: brown;">Fråga oss</em></label><br>
+        <textarea id="questions" name="questions" rows="10" cols="80">
+        </textarea><br><br>
+
+
+        <input type="checkbox" id="newsletter" name="newsletter" value="ja">
+        <label for="newsletter">Jag vill ha nyhetsbrev</label><br>
+        <input type="hidden" name="newsletter" value="nej">
+
+        <input type="checkbox" id="phonecontacted" name="phonecontacted" value="ja">
+        <label for="phonecontacted">Jag vill bli kontaktat på telefon</label><br>
+
+
+
+        <input type="submit" value="Skicka">
+    </form>
+</body>
+
+</html>
