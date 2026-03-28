@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -8,29 +8,30 @@
 </head>
 
 <body style="background-color: rgb(219, 212, 212) ;">
-    <div style="text-align: right;">
-        <a href="index.html">*Hem*</a>
-        <a href="products.html">Våra produkter*</a>
-        <a href="contactus.html">Kontakta oss*</a>
-        <a href="yourcontact.html">Kund kontakt*</a>
-        <a href="mediapage.html">Media*</a>
+    <div style="text-align: right;font-family: Arial, Helvetica, sans-serif; color: black; font-weight: bold;">
+        <a href="index.html">Hem</a>
+        <a href="products.html">| Våra produkter</a>
+        <a href="contactus.html">| Kontakta oss</a>
+        <a href="yourcontact.html">| Kund kontakt</a>
+        <a href="mediapage.html">| Media</a>
         <h1 style="color: maroon; text-align: center;"><em>Kontaktformulär</em></h1>
     </div>
     <br>
 
     <form action="http://primat.se/services/sendform.aspx?xid=registrering&xmail=wafae.essbai@gmail.com" method="post">
-        <label for="name"> Ditt nam</label>
-        <input id="name" type="text" name="name" placeholder="Ange ditt namn" required><br>
+        <div style="background-color: cadetblue; margin: 20px; padding: 20px; border-radius: 15px; font-weight: bold; ">
+            <label for="name"> Namn</label><br>
+            <input id="name" type="text" name="name" placeholder="Ange ditt namn" required><br><br>
 
-        <label for="address"> Din adress </label>
-        <input id="address" type=text name="address" placeholder="Ange din adress"><br>
+            <label for="address"> Adress </label><br>
+            <input id="address" type=text name="address" placeholder="Ange din adress"><br><br>
 
-        <label for="email"> Ditt e-post </label>
-        <input id="email" type="text" name="email" placeholder="Ange ditt e-postadress"><br>
+            <label for="email"> E-post </label><br>
+            <input id="email" type="text" name="email" placeholder="Ange ditt e-postadress"><br><br>
 
-        <label for="phonenumber"> Telefonnummer </label>
-        <input id="phonenumber" type="text" name="phonenumber" placeholder="Ange ditt telefonnummer"><br>
-
+            <label for="phonenumber"> Telefonnummer </label><br>
+            <input id="phonenumber" type="text" name="phonenumber" placeholder="Ange ditt telefonnummer"><br>
+        </div>
         <p>Är du en privat kund eller företag?</p>
 
         <input type="radio" id="private" name="privateorcompany" value="private" onclick="showSize(false)">
@@ -54,12 +55,10 @@
         <script>
             function showSize(show) {
                 const div = document.getElementById("companysize");
-                if (show) 
-                {
+                if (show) {
                     div.style.display = "block";
                 }
-                else 
-                {
+                else {
                     div.style.display = "none";
                 }
             }
@@ -76,7 +75,7 @@
         <input type="hidden" name="newsletter" value="nej">
 
         <input type="checkbox" id="phonecontacted" name="phonecontacted" value="ja">
-        <label for="phonecontacted">Jag vill bli kontaktat på telefon</label><br>
+        <label for="phonecontacted">Jag vill bli kontaktat på telefon</label><br><br>
 
 
 
